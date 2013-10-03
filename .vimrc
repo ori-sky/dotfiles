@@ -10,6 +10,10 @@ syntax on
 " auto indenting
 set ai
 
+" omni completion
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 " if .lvimrc exists in parent directory of loaded file, load it as config
 let lvimrc_path = expand('%:p:h') . '/.lvimrc'
 if filereadable(lvimrc_path)
