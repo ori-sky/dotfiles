@@ -10,8 +10,10 @@ syntax on
 " auto indenting
 set ai
 
-" omni completion
+" filetype plugin
 filetype plugin on
+
+" omni completion
 set omnifunc=syntaxcomplete#Complete
 
 " if .lvimrc exists in parent directory of loaded file, load it as config
