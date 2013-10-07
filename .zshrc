@@ -46,3 +46,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+
+# powerline
+
+if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+  source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
