@@ -1,16 +1,18 @@
 Config
-    { font      = "xft:monospace:size=10px:autohint=true:bold"
+    { font      = "xft:monospace:size=7.8px:autohint=true:bold"
     , bgColor   = "#002b36"
     , fgColor   = "#839496"
     , commands  =
         [ Run Date "%F %H:%M:%S UTC" "date" 10
-        , Run Com "uname" ["-n"] "uname" 3600
+        , Run MPD ["-t", "<state>"] 2
+        , Run Com "sh" ["/home/shockk/mpc_np.sh"] "np" 1
         , Run Com "sh" ["/home/shockk/battery_percent.sh"] "battery_percent" 2
         , Run Com "sh" ["/home/shockk/battery_hours.sh"] "battery_hours" 2
         , Run Com "cat" ["/sys/class/power_supply/BAT0/status"] "battery_status" 5
+        , Run Com "uname" ["-n"] "uname" 3600
         , Run StdinReader
         ]
     , sepChar   = "¬"
     , alignSep  = "}{"
-    , template  = "¬StdinReader¬ }{ <fc=#aaccff>¬battery_status¬ ¬battery_percent¬% (¬battery_hours¬ hours)</fc> <fc=#ffccaa>:</fc> <fc=#aaffcc>¬date¬</fc> <fc=#d75f00>¬uname¬</fc> "
+    , template  = "¬StdinReader¬ }{ <fc=#ff8888>¬np¬</fc> <fc=#ffccaa>:</fc> <fc=#aaccff>¬battery_status¬ ¬battery_percent¬% (¬battery_hours¬ hours)</fc> <fc=#ffccaa>:</fc> <fc=#bbffbb>¬date¬</fc> <fc=#ffccaa>:</fc> <fc=#ffaa88>¬uname¬</fc> "
     }
