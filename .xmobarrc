@@ -1,0 +1,15 @@
+Config
+    { font      = "xft:monospace:size=10px:autohint=true"
+    , bgColor   = "black"
+    , fgColor   = "white"
+    , commands  =
+        [ Run Date "%F %H:%M:%S" "date" 10
+        , Run Com "sh" ["/home/shockk/battery_percent.sh"] "battery_percent" 2
+        , Run Com "sh" ["/home/shockk/battery_hours.sh"] "battery_hours" 2
+        , Run Com "cat" ["/sys/class/power_supply/BAT0/status"] "battery_status" 5
+        , Run StdinReader
+        ]
+    , sepChar   = "¬"
+    , alignSep  = "}{"
+    , template  = "¬StdinReader¬ }{ <fc=#aaccff>¬battery_status¬ ¬battery_percent¬% (¬battery_hours¬ hours)</fc> <fc=#ffccaa>:</fc> <fc=#aaffcc>¬date¬</fc> "
+    }
