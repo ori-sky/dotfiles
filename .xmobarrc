@@ -3,7 +3,7 @@ Config
     , bgColor   = "black"
     , fgColor   = "white"
     , commands  =
-        [ Run Date "%F %H:%M:%S" "date" 10
+        [ Run Date "%F %H:%M:%S UTC" "date" 10
         , Run Com "sh" ["/home/shockk/battery_percent.sh"] "battery_percent" 2
         , Run Com "sh" ["/home/shockk/battery_hours.sh"] "battery_hours" 2
         , Run Com "cat" ["/sys/class/power_supply/BAT0/status"] "battery_status" 5
