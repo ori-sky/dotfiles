@@ -16,7 +16,8 @@ main = do
 
 logHook' xmproc = dynamicLogWithPP xmobarPP
     { ppOutput  = hPutStrLn xmproc
-    , ppTitle   = xmobarColor "#ffaa55" "" . shorten 50
+    , ppCurrent = xmobarColor "#eee8d5" "".wrap "[" "]"
+    , ppTitle   = xmobarColor "#586e75" "".shorten 50
     , ppSep     = " <fc=#ffccaa>:</fc> "
     }
 
