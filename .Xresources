@@ -1,0 +1,70 @@
+! xterm*termName: xterm-256color
+! xterm*metaSendsEscape: true
+! xterm*faceName: Liberation Mono
+! xterm*faceSize: 8
+! URxvt.reverseVideo: true
+URxvt.font: xft:monospace:size=8.5:autohint=true
+URxvt.letterSpace: -1
+URxvt.scrollBar: false
+
+! Common
+#define S_red #dc322f
+#define S_green #41e700
+#define S_yellow #ffcc29
+#define S_blue #268bd2
+#define S_magenta #f04eff
+#define S_cyan #70d1da
+
+#define S_lightred #e35d5b
+#define S_lightgreen #6dff34
+#define S_lightyellow #ffd242
+#define S_lightblue #78b8e7
+#define S_lightmagenta #f69bff
+#define S_lightcyan #ade5ea
+
+! Dark
+#define S_base04 #000204
+#define S_base03 #002b36
+#define S_base02 #073642
+#define S_base01 #586e75
+#define S_base00 #657b83
+#define S_base0 #839496
+#define S_base1 #93a1a1
+#define S_base2 #eee8d5
+#define S_base3 #fdf6e3
+
+! Light
+! #define S_base03 #fdf6e3
+! #define S_base02 #eee8d5
+! #define S_base01 #93a1a1
+! #define S_base00 #839496
+! #define S_base0 #657b83
+! #define S_base1 #586e75
+! #define S_base2 #073642
+! #define S_base3 #002b36
+
+URxvt*background: S_base04
+URxvt*foreground: S_base2
+URxvt*fading: 40
+URxvt*fadeColor: S_base04
+URxvt*cursorColor: S_base1
+URxvt*pointerColorBackground: S_base01
+URxvt*pointerColorForeground: S_base1
+
+URxvt*color0: S_base02
+URxvt*color1: S_red
+URxvt*color2: S_green
+URxvt*color3: S_yellow
+URxvt*color4: S_blue
+URxvt*color5: S_magenta
+URxvt*color6: S_cyan
+URxvt*color7: S_base2
+
+URxvt*color8: S_base03
+URxvt*color9: S_lightred
+URxvt*color10: S_lightgreen
+URxvt*color11: S_lightyellow
+URxvt*color12: S_lightblue
+URxvt*color13: S_lightmagenta
+URxvt*color14: S_lightcyan
+URxvt*color15: S_base3
