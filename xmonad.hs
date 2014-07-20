@@ -7,7 +7,7 @@ import XMonad.Layout.Gaps
 main = do
     xmproc <- spawnPipe "xmobar"
     xmonad defaultConfig
-        { terminal      = "urxvt"
+        { terminal      = "urxvtcd"
         , workspaces    = ["1:weechat", "2:web", "3:term", "4", "5", "6", "7", "8", "9"]
         , logHook       = logHook' xmproc
         , layoutHook    = layoutHook'
