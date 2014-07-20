@@ -1,1 +1,2 @@
 xcompmgr -cf -D4 &
+xscreensaver -nosplash &
