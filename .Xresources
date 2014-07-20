@@ -23,6 +23,7 @@ URxvt.scrollBar: false
 #define S_lightcyan #ade5ea
 
 ! Dark
+#define S_background rgba:0000/0200/0400/c800
 #define S_base04 #000204
 #define S_base03 #002b36
 #define S_base02 #073642
@@ -43,7 +44,8 @@ URxvt.scrollBar: false
 ! #define S_base2 #073642
 ! #define S_base3 #002b36
 
-URxvt*background: S_base04
+URxvt*depth: 32
+URxvt*background: S_background
 URxvt*foreground: S_base2
 URxvt*fading: 40
 URxvt*fadeColor: S_base04
