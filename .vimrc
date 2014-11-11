@@ -1,6 +1,3 @@
-" allows plugins to be installed to ~/.vim/bundle
-"call pathogen#infect()
-
 " 256 colors
 set t_Co=256
 
