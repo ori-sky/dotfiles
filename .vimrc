@@ -42,9 +42,6 @@ hi SpellBad ctermbg=darkred
 
 set backspace=indent,eol,start
 
-"source ~/.vim/vundle.vim
-let g:neocomplete#enable_at_startup = 1
-
 " if .lvimrc exists in parent directory of loaded file, load it as config
 let lvimrc_path = expand('%:p:h') . '/.lvimrc'
 if filereadable(lvimrc_path)
