@@ -21,7 +21,7 @@ set completeopt=longest,menuone
 set tabstop=4
 
 " autocmd haskell
-autocmd FileType haskell setlocal expandtab shiftwidth=4 nojoinspaces
+autocmd FileType haskell setlocal expandtab shiftwidth=4 shiftround nojoinspaces
 
 let &colorcolumn="81,".join(range(121,999),",")
 highlight ColorColumn ctermbg=235
