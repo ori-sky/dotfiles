@@ -8,7 +8,7 @@ main = do
     xmproc <- spawnPipe "xmobar"
     xmonad defaultConfig
         { terminal      = "urxvtcd"
-        , workspaces    = ["1:weechat", "2:web", "3:term", "4", "5", "6", "7", "8", "9"]
+        , workspaces    = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
         , logHook       = logHook' xmproc
         , layoutHook    = layoutHook'
         , modMask       = mod5Mask
