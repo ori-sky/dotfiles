@@ -4,7 +4,7 @@ Config
     , fgColor   = "#839496"
     , commands  =
         [ Run Date "%F %H:%M:%S" "date" 10
-        , Run MPD ["-t", "<state>"] 2
+--        , Run MPD ["-t", "<state>"] 2
         , Run Com "sh" ["/home/shockk/bin/mpc_np.sh"] "np" 1
         , Run Com "sh" ["/home/shockk/bin/battery_percent.sh"] "battery_percent" 2
         , Run Com "sh" ["/home/shockk/bin/battery_hours.sh"] "battery_hours" 2
