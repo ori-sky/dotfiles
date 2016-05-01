@@ -6,6 +6,8 @@ import XMonad.Layout.Gaps
 
 main = do
     xmproc <- spawnPipe "xmobar"
+    spawnPipe "compton -c"
+    spawnPipe "xscreensaver"
     xmonad defaultConfig
         { terminal      = "urxvtcd"
         , workspaces    = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
