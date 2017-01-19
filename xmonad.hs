@@ -8,7 +8,7 @@ import qualified XMonad.StackSet as W
 
 main = do
     xmproc <- spawnPipe "xmobar"
-    spawnPipe "compton -c"
+    spawnPipe "compton --backend glx --vsync opengl-swc --glx-no-stencil --paint-on-overlay -c"
     spawnPipe "xscreensaver"
     xmonad $ defaultConfig
         { terminal      = "urxvtcd"
