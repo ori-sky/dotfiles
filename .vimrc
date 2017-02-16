@@ -10,6 +10,10 @@ set ai
 " ruler
 set ruler
 
+" show tab characters
+set list
+set listchars=tab:>-
+
 " filetype plugin
 filetype plugin on
 
