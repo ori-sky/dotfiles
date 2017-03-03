@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 " 256 colors
 set t_Co=256
 
@@ -9,6 +11,9 @@ set ai
 
 " ruler
 set ruler
+
+" line numbering
+set nu
 
 " show tab characters
 set list
