@@ -26,11 +26,13 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
 
-"set tabstop
 set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
-" autocmd haskell
-autocmd FileType haskell setlocal expandtab shiftwidth=4 shiftround nojoinspaces
+" autocmds
+autocmd FileType haskell setlocal expandtab shiftround nojoinspaces
+autocmd FileType cpp     setlocal expandtab shiftround nojoinspaces tabstop=2 shiftwidth=2 softtabstop=2
 
 let &colorcolumn="81,".join(range(121,999),",")
 highlight ColorColumn ctermbg=235
