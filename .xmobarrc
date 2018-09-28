@@ -3,16 +3,23 @@ Config
     , bgColor   = "#002b36"
     , fgColor   = "#839496"
     , commands  =
-        [ Run Date "%F %H:%M:%S" "date" 10
---        , Run MPD ["-t", "<state>"] 2
-        , Run Com "sh" ["/home/shockk/bin/mpc_np.sh"] "np" 1
-        , Run Com "sh" ["/home/shockk/bin/battery_percent.sh"] "battery_percent" 2
-        , Run Com "sh" ["/home/shockk/bin/battery_hours.sh"] "battery_hours" 2
-        , Run Com "cat" ["/sys/class/power_supply/BAT0/status"] "battery_status" 5
+        [ Run MultiCpu [ "--template", "CPU <total>%"
+                       , "--Low",      "35"
+                       , "--High",     "70"
+                       , "--low",      "green"
+                       , "--normal",   "darkorange"
+                       , "--high",     "darkred"
+                       ] 5
+        , Run Date "%F %H:%M:%S" "date" 10
         , Run Com "uname" ["-n"] "uname" 3600
         , Run StdinReader
+--        , Run MPD ["-t", "<state>"] 2
+--        , Run Com "sh" ["/home/shockk/bin/mpc_np.sh"] "np" 1
+--        , Run Com "sh" ["/home/shockk/bin/battery_percent.sh"] "battery_percent" 2
+--        , Run Com "sh" ["/home/shockk/bin/battery_hours.sh"] "battery_hours" 2
+--        , Run Com "cat" ["/sys/class/power_supply/BAT0/status"] "battery_status" 5
         ]
-    , sepChar   = "¬"
+    , sepChar   = "%"
     , alignSep  = "}{"
-    , template  = "¬StdinReader¬ }{ <fc=#ff8888>¬np¬</fc> <fc=#ffccaa>:</fc> <fc=#aaccff>¬battery_percent¬ (¬battery_hours¬ hours)</fc> <fc=#ffccaa>:</fc> <fc=#bbffbb>¬date¬</fc> <fc=#ffccaa>:</fc> <fc=#ffaa88>¬uname¬</fc> "
+    , template  = "%StdinReader% }{ <fc=#88aaff>%multicpu%</fc> <fc=#ffccaa>:</fc> <fc=#bbffbb>%date%</fc> <fc=#ffccaa>:</fc> <fc=#ffaa88>%uname%</fc> "
     }

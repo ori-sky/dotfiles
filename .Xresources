@@ -3,7 +3,8 @@
 ! xterm*faceName: Liberation Mono
 ! xterm*faceSize: 8
 ! URxvt.reverseVideo: true
-URxvt.font: xft:monospace:size=8.5:autohint=true
+!URxvt.font: xft:monospace:size=8.5:autohint=true
+URxvt.font: xft:PragmataPro Mono:style=Regular:size=10:autohint=true
 URxvt.letterSpace: -1
 URxvt.scrollBar: false
 

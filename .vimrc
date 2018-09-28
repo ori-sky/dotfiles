@@ -38,13 +38,13 @@ let &colorcolumn="81,".join(range(121,999),",")
 highlight ColorColumn ctermbg=235
 
 " home and end key mappings
-imap <esc>OH <esc>0i
-cmap <esc>OH <home>
-nmap <esc>OH 0
+"imap <esc>OH <esc>0i
+"cmap <esc>OH <home>
+"nmap <esc>OH 0
 
-nmap <esc>OF $
-imap <esc>OF <esc>$a
-cmap <esc>OF <end>
+"nmap <esc>OF $
+"imap <esc>OF <esc>$a
+"cmap <esc>OF <end>
 
 hi SpellBad ctermbg=darkred
 
@@ -55,3 +55,8 @@ let lvimrc_path = expand('%:p:h') . '/.lvimrc'
 if filereadable(lvimrc_path)
 	execute 'so' lvimrc_path
 endif
+
+colorscheme elflord
+
+let g:fmtv_clang_format_py = '/home/david/dev/ceva_suite/src/clang/tools/clang-format/clang-format.py'
+let g:clang_format_path = '/home/david/dev/ceva_suite/build-full/src/llvm/bin/clang-format'
