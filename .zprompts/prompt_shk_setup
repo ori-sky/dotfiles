@@ -1,0 +1,8 @@
+prompt_shk_setup () {
+  PS1='%B%F{yellow}%n%f@%F{red}%m%f:%F{blue}%~%f%F{green}%(#.#.%%)%f%b '
+  PS2="> "
+
+  prompt_opts=( cr percent )
+}
+
+prompt_shk_setup "$@"
